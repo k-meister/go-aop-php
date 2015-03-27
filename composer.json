@@ -1,17 +1,24 @@
 {
-    "name": "lisachenko/go-aop-php",
-    "description": "Library for aspect-oriented programming in PHP.",
+    "name": "k-meister/go-aop-php",
+    "description": "Forked by k-meister: Library for aspect-oriented programming in PHP.",
 
     "type": "library",
     "keywords": ["library", "aop", "php", "aspect"],
     "homepage": "http://go.aopphp.com/",
     "license": "MIT",
 
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/k-meister/PHP-Token-Reflection.git"
+        }
+    ],
+
     "require": {
         "php": ">=5.4.0",
         "jakubledl/dissect": "~1.0",
         "doctrine/annotations": "~1.0",
-        "andrewsville/php-token-reflection": "~1.4"
+        "k-meister/php-token-reflection": "dev-develop"
     },
 
     "require-dev": {
