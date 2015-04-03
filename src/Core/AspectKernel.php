@@ -256,12 +256,24 @@ abstract class AspectKernel
                 $transformers[] = new ConstructorExecutionTransformer();
             }
 
-            return $transformers;
+            return $this->customizeTransformers($transformers);
         };
 
         return array(
             new CachingTransformer($this, $sourceTransformers)
         );
+    }
+
+    /**
+     * A possibility to customize the set of linear transforms that are appropriate for an application
+     *
+     * @param array|SourceTransformer[] $sourceTransformers
+     *
+     * @return array
+     */
+    protected function customizeTransformers ($sourceTransformers)
+    {
+        return $sourceTransformers;
     }
 
     /**
